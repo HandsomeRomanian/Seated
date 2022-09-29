@@ -1,11 +1,12 @@
 {
-	"name": "@matai/seated",
+	"name": "@pas/core",
 	"version": "0.0.1",
 	"description": "Typescript Minimal Engine for creatign seating charts.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
-		"/dist"
+		"./dist",
+		"./package.json"
 	],
 	"scripts": {
 		"start": "webpack serve --config webpack.config.js",
