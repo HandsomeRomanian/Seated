@@ -162,9 +162,11 @@ export class Seated {
 				for (let element of this._seats) {
 					if (element.internalId === selectedSeat.data.internalId) continue;
 					const isClippingX =
-						Math.abs(selectedSeat.data.shape.x() - element.shape.x()) < SeatedConst.SEAT_CLIP_RADIUS;
+						Math.abs(selectedSeat.data.shape.x() - element.shape.x()) <
+						selectedSeat.data.shape.width() * 0.2;
 					const isClippingY =
-						Math.abs(selectedSeat.data.shape.y() - element.shape.y()) < SeatedConst.SEAT_CLIP_RADIUS;
+						Math.abs(selectedSeat.data.shape.y() - element.shape.y()) <
+						selectedSeat.data.shape.height() * 0.2;
 
 					// finding magnitude(distance) between two points
 					const vectorDistanceBetweenTwoPointsToPreventIdiotsFromBeingIdiots: Vector2d = {
